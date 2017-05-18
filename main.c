@@ -6,9 +6,31 @@ void output(void);
 
 int main(void)
 {
-	int start,i;
-	
+	int start,i,j;
 	END = 0;
+	char filename[256] = "Database.csv";
+	struct stat st;
+	int ret;
+	ret=stat(filename,&st);
+	if(0==ret)
+	{
+		FILE *fp;
+
+		if((fp=fopen(filename,"r"))==NULL)
+		{	
+			fprintf(stderr,"%s/n","error:can't read file.");
+			return EXIT_FAILURE;
+		}
+			i=0;
+
+		while(fscanf(fp,"%d,%[^,],%[^,]" , &plans[i].id, plans[i].title, plans[i].place) !=EOF)
+
+		{	
+        	i++;
+		END++;
+		}	
+		fclose(fp);
+	}
 	while(1)
 	{
 		printf("\n=====予定管理システムメニュー=====\n\n");
@@ -42,9 +64,9 @@ int main(void)
 				printf("エラー、上手く開けませんでした\n");
 				exit(1);
 				}
-			for( i = 0 ; i < END; i++)
+			for( j = 0 ; j < END; j++)
 				{ 
-				fprintf(outputfile,"%d番目の予定のidは%d\n",i+1,plans[i].id);
+				fprintf(outputfile,"%d,%s,%s",plans[j].id, plans[j].title, plans[j].place);
 				}	
 			fclose(outputfile);
 	 		break;
