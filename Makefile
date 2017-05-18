@@ -2,7 +2,7 @@ OBJS=main.o input.o retrieval.o output.o
 CC=gcc
 
 name_manage:$(OBJS)
-	$(CC) $(OBJS) -o name_manage
+	$(CC) $(OBJS) -o schedule_manage
 
 main.o:main.c variable.h
 	$(CC) -c main.c

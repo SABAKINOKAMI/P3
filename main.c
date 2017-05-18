@@ -6,7 +6,7 @@ void output(void);
 
 int main(void)
 {
-	int start;
+	int start,i;
 	
 	END = 0;
 	while(1)
@@ -34,7 +34,21 @@ int main(void)
 			break;
 		}
 		if(start == 4)
-	 	break;
+			{
+			FILE *outputfile;
+			outputfile = fopen("Database.csv","w");
+			if (outputfile == NULL)
+				{
+				printf("エラー、上手く開けませんでした\n");
+				exit(1);
+				}
+			for( i = 0 ; i < END; i++)
+				{ 
+				fprintf(outputfile,"%d番目の予定のidは%d\n",i+1,plans[i].id);
+				}	
+			fclose(outputfile);
+	 		break;
+			}
 	}
 	return 0;
 }
