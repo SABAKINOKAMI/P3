@@ -9,7 +9,8 @@ void retrieval(void)
 		printf("1 :ID検索\n");
 		printf("2 :日付検索\n");
 		printf("3 :種類検索\n");
-		printf("4 :終了\n\n");
+        printf("4 :重要度検索\n");
+        printf("5 :終了\n\n");
 		printf("メニュー番号を選んで下さい : ");
 		scanf("%d",&smenu);
 		if(smenu ==0)
@@ -53,8 +54,7 @@ void retrieval(void)
 					printf("1 :年検索\n");
 					printf("2 :月検索\n");
 					printf("3 :日にち検索\n");
-					printf("4 :重要度検索\n");
-	 				scanf("%d",&no);
+					scanf("%d",&no);
 					if(no == 0)
 	 				break;
 					switch(no)
@@ -157,8 +157,9 @@ void retrieval(void)
 	 scanf("%d",&no);
 	
 	if(no == 0)
+	 {
 	 break;
-
+	 }
 	for(i=0; i<END; i++)
 		{
 	   	 if(no == plans[i].id)
@@ -174,7 +175,9 @@ void retrieval(void)
 			}
 		}
 	if(i == END)
+	{
 	printf("登録されていません\n\n");
+	}
 	}
 		   	   break;
 				  case 4:

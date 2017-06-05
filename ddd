@@ -1,0 +1,29 @@
+#include "variable.h"
+
+void retrieval(void)
+{
+	int i,no;
+	
+	while(1)
+	{
+	 printf("\n=== 検索処理 ===\n\n");
+	 printf("終了する時は0を入力して下さい。\n");
+	 printf("検索する予定のIDを入力して下さい:");
+	 scanf("%d",&no);
+	
+	if(no == 0)
+	 break;
+
+	for(i=0; i<END; i++)
+		{
+	   	 if(no == plans[i].id)
+			{
+	 		 printf("タイトルは%sで",plans[i].title);
+			 printf("場所は%sです。\n",plans[i].place);
+			 break;
+			}
+		}
+	if(i == END)
+	printf("登録されていません\n\n");
+	}
+}	

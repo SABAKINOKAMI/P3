@@ -8,7 +8,7 @@ int main(void)
 {
 	int start,i,j;
 	END = 0;
-	char filename[256] = "Database.csv";
+    char filename[256] = "Database.csv";
 	struct stat st;
 	int ret;
 	ret=stat(filename,&st);
@@ -43,23 +43,29 @@ int main(void)
 		switch(start)
 		{
 			case 1:
-		 	 input();
+		 	// 1を押すと入力
+            input();
 		 	 break;	
 			case 2:
+            // 2を押すと検索
 		  	  retrieval();
 		  	  break;
+            // 3を押すと出力
 			case 3:
 		    	   output();
 		   	   break;
+            // それ以外では何も起きない
 			default:
 			break;
 		}
+        // 4を押すとDatabase.csvにテキストファイルとして保存して終了
 		if(start == 4)
 			{
 			FILE *outputfile;
 			outputfile = fopen("Database.csv","w");
 			if (outputfile == NULL)
 				{
+                //エラー表示
 				printf("エラー、上手く開けませんでした\n");
 				exit(1);
 				}
