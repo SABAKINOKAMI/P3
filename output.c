@@ -10,6 +10,7 @@ void output(void)
 	{
 	 printf("%d番目の予定のidは%dで",i+1,plans[i].id);
 	 printf("タイトルは%sで",plans[i].title);
+	 printf("重要度は%dで",plans[i].importance);
 	 printf("場所は%sです。 \n\n",plans[i].place);
 	 printf("日時は%d年%d月%d日%d時%d分です。 \n\n",plans[i].year,plans[i].month,plans[i].day,plans[i].hour,plans[i].minute);
 	 printf("予定内容は『%s』です。 \n\n",plans[i].todo);

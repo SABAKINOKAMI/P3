@@ -22,10 +22,9 @@ int main(void)
 			return EXIT_FAILURE;
 		}
 			i=0;
-		while(fscanf(fp,"%d, %[^,], %[^,], %d, %d, %d, %d, %d, %[^,], %lf" , &plans[i].id, plans[i].title,  plans[i].place, &plans[i].year, &plans[i].month, &plans[i].day, &plans[i].hour, &plans[i].minute, plans[i].todo, &plans[i].time)!=EOF )
+		while(fscanf(fp,"%d, %[^,], %[^,], %d, %d, %d, %d, %d, %[^,], %lf,%d" , &plans[i].id, plans[i].title,  plans[i].place, &plans[i].year, &plans[i].month, &plans[i].day, &plans[i].hour, &plans[i].minute, plans[i].todo, &plans[i].time, &plans[i].importance)!=EOF )
 
 		{	
-			printf("ddd");
         	i++;
 			END++;
 		}	
@@ -66,7 +65,7 @@ int main(void)
 				}
 			for( j = 0 ; j < END; j++)
 				{ 
-				fprintf(outputfile,"%d,%s,%s,%d,%d,%d,%d,%d,%s,%lf\n",plans[j].id, plans[j].title, plans[j].place, plans[j].year, plans[j].month, plans[j].day, plans[j].hour, plans[j].minute, plans[j].todo, plans[j].time);
+				fprintf(outputfile,"%d,%s,%s,%d,%d,%d,%d,%d,%s,%lf,%d\n",plans[j].id, plans[j].title, plans[j].place, plans[j].year, plans[j].month, plans[j].day, plans[j].hour, plans[j].minute, plans[j].todo, plans[j].time, plans[j].importance);
 				}	
 			fclose(outputfile);
 	 		break;
