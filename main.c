@@ -60,22 +60,22 @@ int main(void)
 		}
         // 4を押すとDatabase.csvにテキストファイルとして保存して終了
 		if(start == 4)
-			{
+		{
 			FILE *outputfile;
 			outputfile = fopen("Database.csv","w");
 			if (outputfile == NULL)
-				{
-                //エラー表示
+			{
+				//エラー表示
 				printf("エラー、上手く開けませんでした\n");
 				exit(1);
-				}
-			for( j = 0 ; j < END; j++)
-				{ 
-				fprintf(outputfile,"%d,%s,%s,%d,%d,%d,%d,%d,%s,%lf,%d\n",plans[j].id, plans[j].title, plans[j].place, plans[j].year, plans[j].month, plans[j].day, plans[j].hour, plans[j].minute, plans[j].todo, plans[j].time, plans[j].importance);
-				}	
-			fclose(outputfile);
-	 		break;
 			}
+			for( j = 0 ; j < END; j++)
+			{ 
+				fprintf(outputfile,"%d,%s,%s,%d,%d,%d,%d,%d,%s,%lf,%d\n",plans[j].id, plans[j].title, plans[j].place, plans[j].year, plans[j].month, plans[j].day, plans[j].hour, plans[j].minute, plans[j].todo, plans[j].time, plans[j].importance);
+			}	
+			fclose(outputfile);
+			break;
+		}
 	}
 	return 0;
 }
