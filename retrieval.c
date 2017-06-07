@@ -8,14 +8,16 @@ void retrieval(void)
 		printf("\n=====検索処理システムメニュー=====\n\n");
 		printf("1 :ID検索\n");
 		printf("2 :日付検索\n");
-		printf("3 :種類検索\n");
-        printf("4 :重要度検索\n");
+		printf("3 :重要度検索\n");
+        printf("4 :種類検索\n");
         printf("5 :終了\n\n");
 		printf("メニュー番号を選んで下さい : ");
 		scanf("%d",&smenu);
 		if(smenu ==0)
 		 break;
-		switch(smenu)
+		if(smenu ==5)
+         break;
+        switch(smenu)
 		{
 			case 1:
 		 	while(1)
@@ -151,9 +153,9 @@ void retrieval(void)
 			case 3:
 		  while(1)
 	{
-	 printf("\n=== 種類検索システム ===\n\n");
+	 printf("\n=== 重要度検索システム ===\n\n");
 	 printf("終了する時は0を入力して下さい。\n");
-	 printf("検索する予定のIDを入力して下さい:");
+	 printf("検索する予定の重要度を入力して下さい:");
 	 scanf("%d",&no);
 	
 	if(no == 0)
@@ -162,7 +164,7 @@ void retrieval(void)
 	 }
 	for(i=0; i<END; i++)
 		{
-	   	 if(no == plans[i].id)
+	   	 if(no == plans[i].importance)
 			{
 			 printf("%d番目の予定のidは%dで",i+1,plans[i].id);
 			 printf("タイトルは%sで",plans[i].title);
@@ -183,9 +185,9 @@ void retrieval(void)
 				  case 4:
 		 				while(1)
 						{
-						printf("\n=== 重要度検索システム ===\n\n");
+						printf("\n=== 種類検索システム ===\n\n");
 						printf("終了する時は0を入力して下さい。\n");
-						printf("検索する予定の重要度を入力して下さい:");
+						printf("検索する予定の種類番号を入力して下さい:");
 					 	scanf("%d",&yno);
 						 
 						 if(yno == 0)
@@ -193,7 +195,7 @@ void retrieval(void)
 
 						for(i=0; i<END; i++)
 							{
-	  		 	 			if(no == plans[i].importance)
+	  		 	 			if(no == plans[i].kind)
 								{
 	 							printf("%d番目の予定のidは%dで",i+1,plans[i].id);
 	 							printf("タイトルは%sで",plans[i].title);

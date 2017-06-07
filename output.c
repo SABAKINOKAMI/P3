@@ -62,7 +62,7 @@ void output(void)
                     }
                 }
                 freetime = 420 - worktime;
-                printf("自由時間は%dです",freetime);
+                printf("自由時間は%d時間です",freetime);
                 break;
                 }
                 case 2:
@@ -75,7 +75,7 @@ void output(void)
                     }
                 }
                 freetime = 420 - worktime;
-                printf("自由時間は%dです",freetime);
+                printf("自由時間は%d時間です",freetime);
                 break;
                 }
                 case 3:
@@ -88,7 +88,7 @@ void output(void)
                     }
                 }
                 freetime = 420 - worktime;
-                printf("自由時間は%dです",freetime);
+                printf("自由時間は%d時間です",freetime);
                 break;
                 }
                 case 4:
@@ -101,7 +101,7 @@ void output(void)
                     }
                 }
                 freetime = 420 - worktime;
-                printf("自由時間は%dです",freetime);
+                printf("自由時間は%d時間です",freetime);
                 break;
                 }
                 case 5:
@@ -114,7 +114,7 @@ void output(void)
                     }
                 }
                 freetime = 420 - worktime;
-                printf("自由時間は%dです",freetime);
+                printf("自由時間は%d時間です",freetime);
                 break;
                 }
                 case 6:
@@ -127,7 +127,7 @@ void output(void)
                     }
                 }
                 freetime = 420 - worktime;
-                printf("自由時間は%dです",freetime);
+                printf("自由時間は%d時間です",freetime);
                 break;
                 }
                 case 7:
@@ -140,7 +140,7 @@ void output(void)
                     }
                 }
                 freetime = 420 - worktime;
-                printf("自由時間は%dです",freetime);
+                printf("自由時間は%d時間です",freetime);
                 break;
                 }
                 case 8:
@@ -153,7 +153,7 @@ void output(void)
                     }
                 }
                 freetime = 420 - worktime;
-                printf("自由時間は%dです",freetime);
+                printf("自由時間は%d時間です",freetime);
                 break;
                 }
                 case 9:
@@ -166,7 +166,7 @@ void output(void)
                     }
                 }
                 freetime = 420 - worktime;
-                printf("自由時間は%dです",freetime);
+                printf("自由時間は%d時間です",freetime);
                 break;
                 }
                 case 10:
@@ -179,7 +179,7 @@ void output(void)
                     }
                 }
                 freetime = 420 - worktime;
-                printf("自由時間は%dです",freetime);
+                printf("自由時間は%d時間です",freetime);
                 break;
                 }
                 case 11:
@@ -192,7 +192,7 @@ void output(void)
                     }
                 }
                 freetime = 420 - worktime;
-                printf("自由時間は%dです",freetime);
+                printf("自由時間は%d時間です",freetime);
                 break;
                 }
                 case 12:
@@ -205,7 +205,7 @@ void output(void)
                     }
                 }
                 freetime = 420 - worktime;
-                printf("自由時間は%dです",freetime);
+                printf("自由時間は%d時間です",freetime);
                 break;
                 }
                 }

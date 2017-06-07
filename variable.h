@@ -19,7 +19,8 @@ struct name
 	int hour;
 	int minute;
 	int importance;
-	double time;
+	int kind;
+    double time;
 	char title[title_MAX];
 	char place[place_MAX];
 	char todo[todo_MAX];
